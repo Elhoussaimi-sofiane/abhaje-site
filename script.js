@@ -55,6 +55,9 @@ if (!reduceMotion && 'IntersectionObserver' in window) {
     ['.knowhow-copy', 'reveal-left'],
     ['.knowhow-panel', 'reveal-right'],
     ['.partners-row > *', ''],
+    ['.group-card', ''],
+    ['.location-copy', 'reveal-left'],
+    ['.location-map', 'reveal-right'],
     ['.contact-grid > *', ''],
     ['.footer-grid > *', '']
   ];

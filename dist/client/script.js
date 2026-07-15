@@ -1,7 +1,5 @@
 const slides = [...document.querySelectorAll('.hero-slide')];
 const dots = [...document.querySelectorAll('.hero-dot')];
-const menuButton = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.main-nav');
 let activeSlide = 0;
 let carouselTimer;
 
@@ -23,27 +21,6 @@ dots.forEach((dot, index) => dot.addEventListener('click', () => {
   showSlide(index);
   startCarousel();
 }));
-
-menuButton.addEventListener('click', () => {
-  const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-  menuButton.setAttribute('aria-expanded', String(!isOpen));
-  menu.classList.toggle('is-open', !isOpen);
-  document.body.classList.toggle('menu-open', !isOpen);
-});
-
-menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-  menuButton.setAttribute('aria-expanded', 'false');
-  menu.classList.remove('is-open');
-  document.body.classList.remove('menu-open');
-}));
-
-document.addEventListener('keydown', event => {
-  if (event.key === 'Escape') {
-    menuButton.setAttribute('aria-expanded', 'false');
-    menu.classList.remove('is-open');
-    document.body.classList.remove('menu-open');
-  }
-});
 
 document.getElementById('year').textContent = new Date().getFullYear();
 showSlide(0);
@@ -78,6 +55,9 @@ if (!reduceMotion && 'IntersectionObserver' in window) {
     ['.knowhow-copy', 'reveal-left'],
     ['.knowhow-panel', 'reveal-right'],
     ['.partners-row > *', ''],
+    ['.group-card', ''],
+    ['.location-copy', 'reveal-left'],
+    ['.location-map', 'reveal-right'],
     ['.contact-grid > *', ''],
     ['.footer-grid > *', '']
   ];
