@@ -11,16 +11,15 @@
 
 .group-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
 }
 
 .group-card {
   position: relative;
-  display: flex;
-  min-height: 365px;
-  padding: 27px;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 44% 56%;
+  min-height: 270px;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -69,23 +68,33 @@
   background: #123747;
 }
 
-.company-monogram {
-  display: grid;
-  width: 52px;
-  height: 52px;
-  margin-bottom: 46px;
-  place-items: center;
-  border-radius: 12px;
-  background: #e8f6fc;
-  color: var(--blue-dark);
-  font-size: .87rem;
-  font-weight: 900;
-  letter-spacing: .08em;
+.group-media {
+  display: block;
+  min-height: 270px;
+  overflow: hidden;
+  background: #dfe7ea;
 }
 
-.group-card-primary .company-monogram {
-  background: var(--blue);
-  color: #fff;
+.group-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .55s cubic-bezier(.2,.75,.25,1), filter .35s ease;
+}
+
+.group-card:hover .group-media img,
+.group-card:focus-visible .group-media img {
+  transform: scale(1.055);
+  filter: saturate(1.08);
+}
+
+.group-card-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-width: 0;
+  padding: 30px 28px;
+  flex-direction: column;
 }
 
 .company-category {
@@ -96,25 +105,27 @@
   text-transform: uppercase;
 }
 
-.group-card h3 {
+.company-name {
+  display: block;
   margin: 7px 0 10px;
   color: var(--navy);
   font-size: 1.4rem;
   line-height: 1.15;
 }
 
-.group-card-primary h3 {
+.group-card-primary .company-name {
   color: #fff;
 }
 
-.group-card p {
+.company-description {
+  display: block;
   margin: 0 0 24px;
   color: var(--muted);
   font-size: .88rem;
   line-height: 1.6;
 }
 
-.group-card-primary p {
+.group-card-primary .company-description {
   color: #bdd0d9;
 }
 
@@ -234,12 +245,17 @@
 }
 
 @media (max-width: 1050px) {
-  .group-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .group-card {
+    grid-template-columns: 40% 60%;
+    min-height: 250px;
   }
 
-  .group-card {
-    min-height: 330px;
+  .group-media {
+    min-height: 250px;
+  }
+
+  .group-card-content {
+    padding: 25px 22px;
   }
 
   .location-copy {
@@ -258,12 +274,12 @@
   }
 
   .group-card {
-    min-height: 305px;
-    padding: 24px;
+    grid-template-columns: 42% 58%;
+    min-height: 245px;
   }
 
-  .company-monogram {
-    margin-bottom: 32px;
+  .group-media {
+    min-height: 245px;
   }
 
   .location-copy {
@@ -283,6 +299,19 @@
 @media (max-width: 480px) {
   .group-grid {
     gap: 12px;
+  }
+
+  .group-card {
+    grid-template-columns: 1fr;
+  }
+
+  .group-media {
+    min-height: 190px;
+    max-height: 190px;
+  }
+
+  .group-card-content {
+    min-height: 235px;
   }
 
   .location-map,
