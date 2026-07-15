@@ -9,6 +9,7 @@ Cette copie fonctionne uniquement avec HTML, CSS et JavaScript natifs.
 - `navigation.js` / `navigation.css` : menus déroulants et navigation des pages
 - pages HTML dédiées : projets, activités et lieux
 - `realisations.css` : portfolio moderne des réalisations
+- `content-pages.css` : contenus des projets, domaines d’activité et implantations
 - `assets/images` : images locales
 
 Ouvrez simplement `index.html` dans un navigateur. Aucun framework, TypeScript, React, Next.js ou installation n'est nécessaire.
