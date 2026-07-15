@@ -35,10 +35,37 @@ if (shellHeader) {
 
 if (shellFooter) {
   shellFooter.innerHTML = `
-    <footer class="subpage-footer">
-      <div class="container">
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand brand-light" href="index.html" aria-label="ABHAJE & Frères — Accueil">
+            <img src="assets/images/logo.png" alt="ABHAJE & Frères">
+            <span><strong>ABHAJE</strong><small>& Frères</small></span>
+          </a>
+          <p>Construire avec exigence, livrer avec confiance.</p>
+        </div>
+        <div>
+          <h3>Navigation</h3>
+          <a href="index.html#expertises">Nos métiers</a>
+          <a href="index.html#solutions">Nos solutions</a>
+          <a href="index.html#projets">Nos projets</a>
+        </div>
+        <div>
+          <h3>Entreprise</h3>
+          <a href="index.html#profil">Notre profil</a>
+          <a href="index.html#savoir-faire">Savoir-faire</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <p>Agadir, Maroc</p>
+          <a href="tel:+212528531453">+212 528 531 453</a>
+          <a href="mailto:contact@abhaje.ma">contact@abhaje.ma</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
         <span>© ${new Date().getFullYear()} ABHAJE & Frères. Tous droits réservés.</span>
-        <a href="index.html#contact">contact@abhaje.ma</a>
+        <a href="#accueil">Retour en haut</a>
       </div>
     </footer>`;
 }
