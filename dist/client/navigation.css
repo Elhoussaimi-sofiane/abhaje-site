@@ -36,14 +36,14 @@
 }
 
 .dropdown-indicator {
-  width: 7px;
-  height: 12px;
-  margin: -3px 1px 0 2px;
+  width: 8px;
+  height: 8px;
+  margin: -4px 2px 0 3px;
   border: solid currentColor;
   border-width: 0 2px 2px 0;
   border-radius: 0;
   background: transparent;
-  opacity: .55;
+  opacity: .62;
   transform: rotate(45deg);
   transition: opacity .2s ease, transform .2s ease;
 }
@@ -52,7 +52,7 @@
 .nav-dropdown:focus-within .dropdown-indicator,
 .nav-dropdown.is-open .dropdown-indicator {
   opacity: 1;
-  transform: rotate(45deg) scale(1.08);
+  transform: translateY(2px) rotate(45deg);
 }
 
 .main-nav > .nav-cta {

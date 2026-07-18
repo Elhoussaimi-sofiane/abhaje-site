@@ -14,6 +14,7 @@ if (shellHeader) {
         </button>
         <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
           <a href="index.html">Accueil</a>
+          <a href="index.html#profil">Profil</a>
           <div class="nav-dropdown" data-nav-group="projects">
             <button class="nav-dropdown-toggle" type="button" aria-expanded="false">Nos Projets <span class="dropdown-indicator" aria-hidden="true"></span></button>
             <div class="nav-submenu"><a href="realisations.html">Nos Réalisations</a><a href="projets-en-cours.html">Nos Projets en cours</a></div>
@@ -22,7 +23,6 @@ if (shellHeader) {
             <button class="nav-dropdown-toggle" type="button" aria-expanded="false">Activités Domaine <span class="dropdown-indicator" aria-hidden="true"></span></button>
             <div class="nav-submenu"><a href="routiers.html">Routiers</a><a href="batiments.html">Bâtiments</a></div>
           </div>
-          <a href="index.html#profil">Profil</a>
           <div class="nav-dropdown" data-nav-group="locations">
             <button class="nav-dropdown-toggle" type="button" aria-expanded="false">Nos lieux <span class="dropdown-indicator" aria-hidden="true"></span></button>
             <div class="nav-submenu nav-submenu-wide"><a href="siege-ouled-berhil.html">Siège social Ouled Berhil Taroudannt</a><a href="succursale-tassila.html">Succursale Zone Industrielle Tassila–Agadir</a><a href="usine-ouled-aissa.html">Usine Ouled Aissa</a></div>
