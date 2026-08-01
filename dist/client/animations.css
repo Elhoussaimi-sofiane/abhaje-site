@@ -1,4 +1,33 @@
 /* Progressive scroll motion: content stays visible if JavaScript is unavailable. */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.motion-ready .gsap-reveal {
+  will-change: opacity, transform, filter;
+}
+
+.project-card img,
+.group-media img,
+.progress-card img,
+.content-feature img,
+.location-visual img {
+  --motion-scale: 1;
+  --motion-y: 0%;
+  --hover-scale: 1;
+  transform: translate3d(0, var(--motion-y), 0) scale(calc(var(--motion-scale) * var(--hover-scale))) !important;
+  will-change: transform;
+}
+
+.project-card:hover img,
+.group-card:hover .group-media img,
+.group-card:focus-visible .group-media img,
+.progress-card:hover img {
+  --hover-scale: 1.045;
+}
+
 .reveal-ready .scroll-reveal {
   opacity: 0;
   transform: translate3d(0, 46px, 0) scale(.985);
@@ -92,6 +121,14 @@
   }
   .partners-row img {
     transition: none;
+  }
+
+  .project-card img,
+  .group-media img,
+  .progress-card img,
+  .content-feature img,
+  .location-visual img {
+    transform: none !important;
   }
 }
 
